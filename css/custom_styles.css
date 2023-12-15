@@ -1,0 +1,383 @@
+body {
+    background-color: #003d69;
+}
+/*HEADER*/
+.header-promocje {
+    background-image: url("../upload/project/header-promocje.png");
+    background-size: cover;
+    height: 500px;
+}
+/*CONTENT*/
+.content-h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+}
+
+.content-p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.search-form input{
+    padding: 16px 20px;
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#002f53+0,008496+51,002f53+100 */
+    background: #002f53; /* Old browsers */
+    background: -moz-linear-gradient(left, #002f53 0%, #008496 51%, #002f53 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #002f53 0%,#008496 51%,#002f53 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #002f53 0%,#008496 51%,#002f53 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f53', endColorstr='#002f53',GradientType=1 ); /* IE6-9 */
+    border: 0;
+}
+
+.search-form {
+    position: relative;
+}
+.search-form-icon {
+    position: absolute;
+    right: 25px;
+    top: 14px;
+
+}
+
+.breadcrumbs {
+    padding: 0;
+}
+
+.breadcrumbs li {
+    list-style: none;
+    font-size: 14px;
+    margin: 20px 10px 20px 0;
+}
+
+.breadcrumbs li a {
+    color: #000;
+}
+
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 26px;
+    text-align: center;
+    z-index: 10;
+}
+
+.img-adjust {
+    padding: 1px;
+}
+
+.img-overlay-1 {
+    background-image: url("../upload/project/img_shop_wine.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 510px;
+    background-position: center;
+}
+.img-overlay-1:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: linear-gradient(to bottom right,#000,#000);
+    opacity: .6;
+}
+
+.img-overlay-2 {
+    background-image: url("../upload/project/img_bartender.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 510px;
+    background-position: center;
+}
+.img-overlay-2:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: linear-gradient(to bottom right,#000,#000);
+    opacity: .6;
+}
+
+.img-overlay-3 {
+    background-image: url("../upload/project/img_toast.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 510px;
+    background-position: center;
+}
+.img-overlay-3:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: linear-gradient(to bottom right,#000,#000);
+    opacity: .6;
+}
+
+.content-bg {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dee0de+0,fffdfc+49,dee0de+100 */
+    background: #dee0de; /* Old browsers */
+    background: -moz-linear-gradient(left, #dee0de 0%, #fffdfc 49%, #dee0de 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #dee0de 0%,#fffdfc 49%,#dee0de 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #dee0de 0%,#fffdfc 49%,#dee0de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dee0de', endColorstr='#dee0de',GradientType=1 ); /* IE6-9 */
+}
+
+/*CONTENT - oferta weselna*/
+.content-guarantee {
+    background: #002f53; /* Old browsers */
+    background: -moz-linear-gradient(left, #002f53 0%, #2989d8 25%, #2989d8 25%, #2989d8 39%, #207cca 86%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #002f53 0%,#2989d8 25%,#2989d8 25%,#2989d8 39%,#207cca 86%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #002f53 0%,#2989d8 25%,#2989d8 25%,#2989d8 39%,#207cca 86%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f53', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+    color: #fff;
+}
+
+/*Dodatkowe uslugi*/
+.options-area {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+49,f6f6f6+49,ededed+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #f6f6f6 49%, #f6f6f6 49%, #ededed 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%,#f6f6f6 49%,#f6f6f6 49%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%,#f6f6f6 49%,#f6f6f6 49%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 */
+}
+.options-area-title {
+    font-size: 28px;
+    text-align: center;
+}
+.options-area-bg-first {
+    background-image: url("https://picsum.photos/id/1065/380/200");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: center;
+}
+.options-area-bg-first:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: linear-gradient(to bottom right,#000,#000);
+    opacity: .4;
+}
+.options-area-bg-second {
+    background-image: url("https://picsum.photos/id/1065/380/200");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: center;
+}
+.options-area-bg-second:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: linear-gradient(to bottom right,#000,#000);
+    opacity: .4;
+}
+.options-area-bg-third {
+    background-image: url("https://picsum.photos/id/1065/380/200");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    background-position: center;
+}
+.options-area-bg-third:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: linear-gradient(to bottom right,#000,#000);
+    opacity: .4;
+}
+
+.options-area-description {
+    position: absolute;
+top: 25%;
+    left: 0;
+    padding-left: 70px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/*CONTENT nasze marki*/
+.nasze-marki {
+
+}
+.nasze-marki-img-container {
+    position: relative;
+    text-align: center;
+}
+
+.nasze-marki-img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    z-index: 10;
+}
+
+.about-us-main-description {
+    font-size: 22px;
+}
+
+.about-us-custom-description {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-us-blue-section {
+    margin-top: -50px;
+    padding-bottom: 80px;
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00355d+0,0064a0+49,0064a0+51,00355d+100 */
+    background: #00355d; /* Old browsers */
+    background: -moz-linear-gradient(left, #00355d 0%, #0064a0 49%, #0064a0 51%, #00355d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #00355d 0%,#0064a0 49%,#0064a0 51%,#00355d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #00355d 0%,#0064a0 49%,#0064a0 51%,#00355d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00355d', endColorstr='#00355d',GradientType=1 ); /* IE6-9 */
+}
+
+.about-us-blue-section-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.about-us-blue-section-custom-description {
+    font-size: 20px;
+}
+
+.about-us-crew-section {
+    padding-bottom: 200px;
+}
+
+.about-us-crew-section-title {
+    font-size: 42px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    color: #5D5D5D;
+}
+
+.about-us-crew-section-description {
+    color: #5D5D5D;
+}
+
+.about-us-crew-section-image {
+    border-radius: 50%;
+}
+
+.about-us-crew-section-image-title {
+    padding-top: 20px;
+    margin-bottom: 0;
+    color: #797979;
+    font-size: 20px;
+}
+
+.about-us-crew-section-image-description {
+    color: #B5B5B5;
+    font-size: 16px;
+}
+
+.about-us-bottom-section {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c8c8c8+0,f9fdff+33,f9fdff+67,c8c8c8+100 */
+    background: #c8c8c8; /* Old browsers */
+    background: -moz-linear-gradient(left, #c8c8c8 0%, #f9fdff 33%, #f9fdff 67%, #c8c8c8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #c8c8c8 0%,#f9fdff 33%,#f9fdff 67%,#c8c8c8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #c8c8c8 0%,#f9fdff 33%,#f9fdff 67%,#c8c8c8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c8', endColorstr='#c8c8c8',GradientType=1 ); /* IE6-9 */
+}
+
+.about-us-bottom-section-company {
+    padding: 60px 0;
+    font-size: 12px;
+}
+
+.about-us-bottom-section-rodo {
+    font-size: 12px;
+    padding: 60px 0;
+    color: #4e555b;
+}
+
+/*BOTTOM AREA*/
+
+/*.footer-section .address-data, .footer-section .footer-links-container{
+    padding-left:7%;
+}
+
+.footer-section .address-data .bottom-area-company{
+    font-size: 17px;
+    color: #000;
+}
+
+.footer-section .address-data .d-flex{
+    font-size: 13px;
+}
+
+
+.bottom-area-company {
+    font-size: 20px;
+    color: #000;
+}
+
+.img-map-image {
+    position: relative;
+}
+
+.img-map-text {
+    position: absolute;
+    bottom: 30px;
+    left: 5px;
+    color: #5f5f5f;
+    font-size: 20px;
+    text-align: left;
+    z-index: 10;
+}*/
+/*FOOTER*/
+/*.footer-section {
+    background-color: #F4F4F4;
+}
+
+.footer-section .footer-links{
+    text-align:left;
+}
+
+.footer-section .footer-links a{
+    display:block;
+    color: #4d4d4d;
+}
+
+.footer-content {
+    padding: 30px 0;
+}
+
+footer a {
+    font-size: 14px;
+    color: #ffffff;
+}*/
+
