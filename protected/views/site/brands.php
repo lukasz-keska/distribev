@@ -35,7 +35,7 @@ $this->pageTitle = 'Nasze marki';
         top: 0;
         left: 0;
         right: 0;
-        background: rgba(176, 7, 21, 0.8);
+        background: rgba(51, 92, 164, 0.8);
     }
     
     .our-brands-img-container>.tile-desc{

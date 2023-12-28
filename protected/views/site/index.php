@@ -6,8 +6,6 @@
  *
  */
 $this->pageTitle = 'Strona główna';
-
-
 ?>
 
 
@@ -28,188 +26,137 @@ $this->pageTitle = 'Strona główna';
 </div>
 
 <style>
-    
-.img-prom-shopsdetal {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 550px;
-    background-position: center;
-}
-.img-prom-shopsdetal:before {
-    content: '';
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    background-image: linear-gradient(to bottom right,#000,#000);
-    opacity: .4;
-}
-
-.img-prom-horeca {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 550px;
-    background-position: center;
-}
-.img-prom-horeca:before {
-    content: '';
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    background-image: linear-gradient(to bottom right,#000,#000);
-    opacity: .4;
-}
-
-.img-prom-b2b {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 550px;
-    background-position: center;
-}
-.img-prom-b2b:before {
-    content: '';
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    background-image: linear-gradient(to bottom right,#000,#000);
-    opacity: .4;
-}
-
-#tiles-section .img-big.blue .tile-strip {
-    background: none;
-    font-weight: 650;
-    font-size: 14px;
-    margin-bottom: 10px;
-    top: 10px;
-    position: relative;
-    padding: 5px;
-}
-
-.img-big>.tile-desc{
-    display:none;
-}
-
-.img-big.blue>.tile-desc{
-    position:relative;
-    z-index:11;
-    width: 100%;
-    text-align: center;
-    list-style: none;
-    display:block;
-}
-
-.img-big.blue>.tile-desc>.tile-inner-desc{
-    display:inline-block;  
-    padding: 0 45px 3px 0;
-    color:#FFF;
-    text-align: left;
-}
-
-.img-big.blue>.tile-desc>.tile-inner-desc *{
-    background-color:transparent !important;
-}
-
-</style>
-
-
-<div class="std-content">
-    <div class="std-title">
-        <h2 class="link"><a href="<?=Yii::app()->controller->createUrl('site/brands'); ?>">Nasze marki</a></h2>
-        
-    </div>
-</div>
-
-<style>
-    
-    .our-brands{
-        margin-top:1.5rem!important;
+    #tiles-section .img-big.blue .tile-strip {
+        background: none;
+        font-weight: 650;
+        font-size: 14px;
+        margin-bottom: 10px;
+        top: 10px;
+        position: relative;
+        padding: 5px;
     }
-    
-    .our-brands .our-brands-img-container{
-        cursor:pointer;
+
+    .img-big>.tile-desc{
+        display:none;
     }
-    
-    .our-brands .our-brands-img-container img{
-        margin-top:0px !important;
-    }
-    
-    .our-brands .our-brands-img-container .img-container{
+
+    .img-big.blue>.tile-desc{
         position:relative;
-        z-index:1;
-    }
-    
-    .our-brands .our-brands-img-container.blue .img-container:after {
-        content: " ";
-        z-index: 10;
-        display: block;
-        position: absolute;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(176, 7, 21, 0.8);
-    }
-    
-    .our-brands-img-container>.tile-desc{
-        display:none;
-    }
-    
-    .our-brands-img-container.blue>.our-brands-img-text{
-        //top:26%;
-    }
-    
-    .our-brands-img-container>.tile-desc{
-        display:none;
-    }
-    
-    .our-brands-img-container.blue>.tile-desc{
-        position: absolute;
-        display: block;
+        z-index:11;
         width: 100%;
-        top: 32%;
-        z-index: 10;
-        color:#FFF;
+        text-align: center;
+        list-style: none;
+        display:block;
     }
-   
-    .our-brands-img-container.blue>.tile-desc>.tile-inner-desc{
+
+    .img-big.blue>.tile-desc>.tile-inner-desc{
         display:inline-block;  
         padding: 0 45px 3px 0;
         color:#FFF;
         text-align: left;
     }
-    
-    .our-brands-img-container.blue>.tile-desc>.tile-inner-desc *{
+
+    .img-big.blue>.tile-desc>.tile-inner-desc *{
         background-color:transparent !important;
     }
-    
+
+
+    /* the slides */
+    .slick-slide {
+        margin: 0 10px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 0 -10px;
+    }
 </style>
-<div class="our-brands pb-5">
 
-    <?php foreach($categories as $i => $c): ?>
+<div class="std-content">
+    <div class="std-title">
+        <h2 class="link"><a href="<?= Yii::app()->controller->createUrl('site/brands'); ?>">Nasze marki</a></h2>
 
-        <?php if(!($i%3)): ?>
-            <div class="row">
-        <?php endif; ?>
-            <div class="col-sm-4 col-12 brand-outer" style="margin-bottom: 1.5rem;" data-i="<?=$i?>"<?php if($c->filebanner->hasImage()): ?> data-banner="<?=$c->filebanner->getUrl('original')?>"<?php endif;?>>    
-                <div class="our-brands-img-container" data-url="<?=Yii::app()->controller->createUrl('site/brands',['id'=>$c->category_id])?>">
-                    <?php if($c->filebrand->hasImage()): ?>
-                    <div class="img-container"><img src="<?=$c->filebrand->getUrl('original')?>" class="img-fluid mt-4" /></div>
+    </div>
+</div>
 
-                    <?php endif;?>
-                        <div class="our-brands-img-text"><?=$c->title?></div>
-                        <!--<div class="tile-desc"><div class="tile-inner-desc"><?=$c->tile_desc?></div></div>-->
-                </div>  
-            </div>   
-        <?php if(($i%3)==2 || !isset($categories[$i+1])): ?>
+<div class="container" id="tiles-section">
+    <div class="row">
+        <div class="col-12 nopadding">
+            <div class="row all">
+                <div class="col-md-8 col-sm-12 nopadding">
+                    <div class="row half nomargin" >
+                        <div class="col-12 paddingl" >
+
+                            <div data-url="<?= (!empty($categories[0]->url)) ? $categories[0]->url : $categories[0]->getUrl(); ?>" class= "img-big"<?= $categories[0]->fileimage->hasImage() ? ' style="background: url(' . $categories[0]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                                <p class="tile-strip"><?= $categories[0]->title; ?> </p>
+                                <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[0]->tile_desc; ?></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row half nomargin">
+                        <div class="col-md-6 col-sm-12 paddingl" >
+                            <div data-url="<?= (!empty($categories[11]->url)) ? $categories[11]->url : $categories[11]->getUrl(); ?>"  class= "img-big"<?= $categories[11]->fileimage->hasImage() ? ' style="background: url(' . $categories[11]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                                <p class="tile-strip"><?= $categories[11]->title; ?> </p>
+                                <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[11]->tile_desc; ?></div></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 paddingl full" >
+                            <div data-url="<?= (!empty($categories[12]->url)) ? $categories[12]->url : $categories[12]->getUrl(); ?>"  class= "img-big"<?= $categories[12]->fileimage->hasImage() ? ' style="background: url(' . $categories[12]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                                <p class="tile-strip"><?= $categories[12]->title; ?> </p>
+                                <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[12]->tile_desc; ?></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 nopadding" >
+                    <div class="col-12 paddingr full" >
+                        <div data-url="<?= (!empty($categories[1]->url)) ? $categories[1]->url : $categories[1]->getUrl(); ?>"  class="img-big"<?= $categories[1]->fileimage->hasImage() ? ' style="background: url(' . $categories[1]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                            <p class="tile-strip"><?= $categories[1]->title; ?> </p>
+                            <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[1]->tile_desc; ?></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <?php endif; ?>
-    <?php endforeach; ?>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-12 nopadding">
+            <div class="row all">
+                <div class="col-md-4 nopadding" >
+                    <div class="col-12 paddingl full" >
+                        <div data-url="<?= (!empty($categories[2]->url)) ? $categories[2]->url : $categories[2]->getUrl(); ?>"  class= "img-big"<?= $categories[2]->fileimage->hasImage() ? ' style="background: url(' . $categories[2]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                            <p class="tile-strip"><?= $categories[2]->title; ?> </p>
+                            <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[2]->tile_desc; ?></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 nopadding">
+                    <div class="row half nomargin" >
+                        <div class="col-md-6 paddingl" >
+                            <div data-url="<?= (!empty($categories[7]->url)) ? $categories[7]->url : $categories[7]->getUrl(); ?>"  class= "img-big"<?= $categories[7]->fileimage->hasImage() ? ' style="background: url(' . $categories[7]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                                <p class="tile-strip"><?= $categories[7]->title; ?> </p>
+                                <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[7]->tile_desc; ?></div></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 paddingr" >
+                            <div data-url="<?= (!empty($categories[3]->url)) ? $categories[3]->url : $categories[3]->getUrl(); ?>"  class= "img-big"<?= $categories[3]->fileimage->hasImage() ? ' style="background: url(' . $categories[3]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                                <p class="tile-strip"><?= $categories[3]->title; ?> </p>
+                                <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[3]->tile_desc; ?></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row half nomargin">
+                        <div class="col-12 paddingr" >
+                            <div data-url="<?= (!empty($categories[15]->url)) ? $categories[15]->url : $categories[15]->getUrl(); ?>"  class= "img-big"<?= $categories[15]->fileimage->hasImage() ? ' style="background: url(' . $categories[15]->fileimage->getUrl('original') . ')"' : ''; ?>>
+                                <p class="tile-strip"><?= $categories[15]->title; ?> </p>
+                                <div class="tile-desc"><div class="tile-inner-desc"><?= $categories[15]->tile_desc; ?></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -232,11 +179,65 @@ $this->pageTitle = 'Strona główna';
     .slick-slider-navigation-arrows img{
         height:16px;
     }
+    
+    .safari-position{
+        margin-top:-35px;
+    }
+</style>
+
+<?php if(count($news)): ?>
+
+<div class="std-content">
+    <div class="std-title news-control">
+        <h2 class="link"><a href="<?=Yii::app()->controller->createUrl('site/news'); ?>">Aktualności</a></h2>
+        <div class="slick-slider-navigation-arrows">
+            <div class="arrow-left dtc text-center news-prev-btn">
+                <p class="slick-slider-left">
+                    <img src="<?=bu('gfx/arrow-left.png')?>" alt="w lewo">
+                </p>
+            </div>
+            <div class="arrow-right dtc text-center news-next-btn">
+                <p class="slick-slider-right">
+                    <img src="<?=bu('gfx/arrow-right.png')?>" alt="w prawo">
+                </p>
+            </div>
+        </div>        
+    </div>
+</div>
+ 
+<style>
+    <?php foreach ($news as $k => $n): ?>
+        <?php if($n->file->hasImage()): ?>
+            .aktualnosci .el.el<?=$n->news_id?>{
+                background-image:url(<?=$n->file->getUrl('small')?>);
+            }
+        <?php endif; ?>
+    <?php endforeach; ?>    
 </style>
 
 
+<!-- POCZĄTEK BLOKU - potrzebne razem z zamknieciem i otwarciem kontenera zeby zlikwidowac padding na sliderze -->
+</div>
+<div class="aktualnosci container" style="padding:0px;">
+    <?php foreach ($news as $k => $n): ?>
+        <?php if($n->file->hasImage()): ?>
+    <a href="<?=Yii::app()->controller->createUrl('site/news',['id'=>$n->news_id])?>" class="el el<?=$n->news_id?>">
+            <div class="news-title-apply">
+                <p><?=$n->title?></p>
+            </div>   
+            </a>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div>
+<div class="container">
+<!-- KONIEC BLOKU -->
+    
+
+
+<?php endif; ?>
+
 <div id="modal_adv" style="display:none;">
-    <?php if(file_exists(__DIR__.'/../../../images/popup/popup_UB.png')): ?>
+    <?php if (file_exists(__DIR__ . '/../../../images/popup/popup_UB.png')): ?>
         <p><img src="/images/popup/popup_UB.png" /></p>
     <?php endif; ?>
 </div>
@@ -251,20 +252,22 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
 ?>
 
 <script type="text/javascript">
-  // debounce utility from underscorejs.org
-  var debounce = function(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      if (immediate && !timeout) func.apply(context, args);
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+    // debounce utility from underscorejs.org
+    var debounce = function (func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate)
+                    func.apply(context, args);
+            };
+            if (immediate && !timeout)
+                func.apply(context, args);
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
     };
-  };
 </script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
@@ -279,35 +282,35 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
 
 
 
-    
+
 
 
 <style>
-   
-    
+
+
     #modal_adv{
         padding: 0px;
         max-height: 485px;        
     }
-    
+
     @media only screen and (max-device-width: 480px) {
         #modal_adv{         
             max-height: 281px;        
         }
     }
-    
+
     #modal_adv img{
         width: 100%;
     }
-    
+
     .modal a.close-modal{
-            top: -1.5px;
-            right: -2.5px;
+        top: -1.5px;
+        right: -2.5px;
     }
-    
+
     .arrow-left {
         display: inline-block;
-        background-color: #b00715;
+        background-color: #003b7e;
         width: 50%;
         display: table-cell;
         padding: 15px;
@@ -329,54 +332,54 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
         padding-bottom: 15px;
         text-transform: uppercase;
         font-weight: bold;
-        
+
         width: 200px;
         height: 30px;
-        
+
     }
-    
+
     .std-content h2.link a{
         color: #000 !important;
-        border-bottom:1px solid #b00715;
+        border-bottom:1px solid #003b7e;
     }
-    
+
     .std-content h2.link a:hover{
         text-decoration: none;
     }
-    
+
     .std-title {
         position: relative;
         margin-top: 40px;
     }
-    
+
     .navigation-arrows a {
         display: block;
         width: 100%;
         height: 100%;
         content: "";
     }
-    
-    
+
+
     #header .header-text{
         color: #FFF;
         font-size: 80px;
         padding-top: 190px;
     }
-    
-    
-    
+
+
+
 </style>
 
 <script type="text/javascript">
-    
-    $(document).ready(function(){
-        
+
+    $(document).ready(function () {
+
         var bannertext = $('#bannertext-content').html();
         $('#header').prepend('<div class="header-text d-flex justify-content-center"></div>');
         $('#header').find('.header-text').html(bannertext);
-        
+
     });
-    
+
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -387,8 +390,8 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
         draggable: true,
         pauseOnHover: false
     });
-    
-   
+
+
     $('.aktualnosci').slick({
         dots: false,
         infinite: true,
@@ -402,55 +405,55 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
         draggable: true,
         pauseOnHover: true
     });
-   
-    <?php if(file_exists(__DIR__.'/../../../images/popup/popup_UB.png')): ?>
-        
-        
-   $("#modal_adv").modal({
-        escapeClose: true,
-        clickClose: true,
-        showClose: true
-      });
-    <?php endif; ?>
-    
-    $(document).ready(function(){
-       
-       $('#tiles-section .img-big').on('mouseover', function(){
-           $(this).addClass('blue');
-       })
-       
-       $('#tiles-section .img-big').on('mouseout', function(){
-           $(this).removeClass('blue');
-       })
-       
-       $('#tiles-section .img-big').on('click', function(){
-           window.location.href=$(this).data('url');
-       });
-       
-       $('.our-brands .our-brands-img-container').on('mouseover', function(){
+
+<?php if (file_exists(__DIR__ . '/../../../images/popup/popup_UB.png')): ?>
+
+
+        $("#modal_adv").modal({
+            escapeClose: true,
+            clickClose: true,
+            showClose: true
+        });
+<?php endif; ?>
+
+    $(document).ready(function () {
+
+        $('#tiles-section .img-big').on('mouseover', function () {
             $(this).addClass('blue');
         })
 
-        $('.our-brands .our-brands-img-container').on('mouseout', function(){
+        $('#tiles-section .img-big').on('mouseout', function () {
             $(this).removeClass('blue');
         })
 
-        $('.our-brands .our-brands-img-container').on('click', function(){
-            window.location.href=$(this).data('url');
+        $('#tiles-section .img-big').on('click', function () {
+            window.location.href = $(this).data('url');
         });
-       
+
+        $('.our-brands .our-brands-img-container').on('mouseover', function () {
+            $(this).addClass('blue');
+        })
+
+        $('.our-brands .our-brands-img-container').on('mouseout', function () {
+            $(this).removeClass('blue');
+        })
+
+        $('.our-brands .our-brands-img-container').on('click', function () {
+            window.location.href = $(this).data('url');
+        });
+
     });
-    
+
     //jQuery(window).load(function () {
-        
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 50) {
-                 $('nav.top-navigation').addClass('fix');
-            } else {
-                 $('nav.top-navigation').removeClass('fix');
-            }
-        });
-        
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('nav.top-navigation').addClass('fix');
+        } else {
+            $('nav.top-navigation').removeClass('fix');
+        }
+    });
+
     //});
-    
+
 </script>

@@ -1,0 +1,596 @@
+<?php
+/**
+ * @var $contacts Contact[]
+ */
+$this->pageTitle = $model->title;
+
+?>
+
+
+
+<style>
+    
+    /* CSS du�ej mapki */
+
+    #bigmap {
+        height:630px;
+    }
+
+    .map-fluid {
+    max-width:100%;
+    height:auto
+    }
+
+    .img-adjust {
+    padding: 1px;
+}
+    
+    .options-area-bg-first {
+        background-image: url("/gfx/about/lista-oddzialow.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        background-position: center;
+    }
+    .options-area-bg-first:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        background-image: linear-gradient(to bottom right,#000,#000);
+        opacity: .4;
+    }
+    .options-area-bg-second {
+        background-image: url("/gfx/about/sklepy-partnerskie.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        background-position: center;
+    }
+    .options-area-bg-second:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        background-image: linear-gradient(to bottom right,#000,#000);
+        opacity: .4;
+    }
+    .options-area-bg-third {
+        background-image: url("/gfx/about/kariera.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        background-position: center;
+    }
+    .options-area-bg-third:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        background-image: linear-gradient(to bottom right,#000,#000);
+        opacity: .4;
+    }
+
+    .options-area-description {
+        position: absolute;
+    top: 25%;
+        left: 0;
+        padding-left: 70px;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+        z-index: 10;
+    }
+    
+    .btn.btn-outline-light{
+        cursor:pointer;
+    }
+    
+    .sale-team{
+        margin-bottom:0px !important;
+    }
+    
+    .options-area-description a, .options-area-description a>.btn{
+        width:100%;
+    }
+    
+</style>
+
+
+<div class="content-grey">
+    <div class="container">
+        <div id="content">
+        
+            <ul class="d-flex breadcrumbs">
+                <li><a href="#">Strona główna</a></li>
+                <li>></li>
+                <li><a href="#"><?=$model->title?></a></li>
+            </ul>
+
+            <h2 class="content-h2 mt-2 mb-2">
+                <strong><?=$model->title?></strong>
+            </h2>
+
+            <div class="about-us">
+                <p class="pt-3 about-us-main-description"><?=$model->header?></p>
+
+                <div class="row pt-5">
+                    <div class="col-sm-6 col-12 mb-0">
+                        <p class="about-us-custom-description"><?=$model->content?></p>
+                    </div>
+                    <div class="col-sm-6 col-12">
+                        <?php if($model->file->hasImage()): ?>
+                            <?=CHtml::image($model->file->getUrl('medium'),'',['class'=>'img-fluid about-us-image']); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-blue mb-3 sale-team">
+            <div class="container about-us-blue-section">
+                <h2 class="about-us-blue-section-title pt-5">Doświadczony Zespół</h2>
+
+                <div class="row pt-5 pb-5">
+                    <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Ponad<br />750 pracowników</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">12 oddziałów<br />W Polsce</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Ponad<br />125 handlowców</p>
+                        </div>
+                    </div>
+                  <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">120 specjalistycznych<br /> sklepów alkoholowych</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5 pb-5">
+                    <div class="col-sm-6 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Obsługa największych<br />sieci międzynarodowych</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Sprzedaż hurtowa<br />i dla gastronomii</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <p class="about-us-custom-description">Obsługa Klienta jest dla nas szczególnie ważna. Naszą ambicją jest posiadanie wykwalifikowanych handlowców, którzy dzięki
+                    swojej wiedzy i umiejętnościom będą odpowiednimi partnerami dla naszych Odbiorców. Nowoczesne urządzenia mobilne, w
+                    które są wyposażeni, pozwalają na ciągły dostęp do informacji o stanach magazynowych i aktualnych promocjach. Dzięki nim
+                    mogą bezzwłocznie przesyłać zamówienia do centrów logistycznych aby zminimalizować czas oczekiwania i usprawnić proces
+                    dostawy naszych produktów.</p>
+                </div>
+            
+</div>
+<div class="content-light">
+    <div class="container about-us-crew-section">
+                <h2 class="about-us-crew-section-title">Zarząd firmy</h2>
+                <p class="about-us-custom-description text-center"><?=$elements['zarzad-opis'][0]['content']?></p>
+
+                <div class="row text-center pt-5 pb-5">
+
+                    
+                    <?php $col = ceil(12/count($elements['zarzad'])); ?>
+                    
+                    <?php foreach($elements['zarzad'] as $el): ?>
+                        
+                        <div class="col-sm-<?=$col?> col-12 text-center managment-el">
+                            <p class="about-us-crew-section-image-title"><?=$el['title']?></p>
+                            <p class="about-us-crew-section-image-description"><?=$el['content']?></p>
+                        </div>
+                    
+                    <?php endforeach; ?>
+                    
+                </div>
+
+
+    </div>
+</div>
+            <div class="about-us-bottom-section">
+                <div class="row">
+                    <div class="col-sm-8 col-12">
+                        <div id="bigmap" class="map-fluid"></div>
+                    </div>
+                    
+                    
+                    <div class="col-sm-4 col-12 d-flex flex-column justify-content-center">
+                        <div class="d-inline-flex">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/gfx/about/navigation.png" class="img-fluid" style="width: 30px; height: 35px;"/>
+
+                            <p class="pl-2">
+                                <span class="text-uppercase font-weight-bold">Siedziba Główna</span><br />
+                                <span>United Beverages S.A.<br />
+                                ul. Przelot 66<br />
+                                87-100 Toruń</span><br />
+                            </p>
+                        </div>
+
+                        <hr />              
+                        <div class="d-inline-flex">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/gfx/about/navigation.png" class="img-fluid" style="width: 30px; height: 35px;"/>
+                            <p class="pl-2">
+                                <span class="text-uppercase font-weight-bold">Biuro zarządu</span><br />
+                                <span>United Beverages S.A.<br />
+                                                    Ul. Dziekońskiego 3,<br />
+                                                    00-728 Warszawa</span><br />
+                            </p>
+                        </div>
+                        <hr />  
+                        <div class="d-inline-flex">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/gfx/about/navigation.png" class="img-fluid" style="width: 30px; height: 35px;"/>
+                            <p class="pl-2">
+                                <span class="text-uppercase font-weight-bold">Spółki sprzedaży detalicznej</span><br />
+                                 <span>AlkoSfera Sp. z o.o.<br />
+                            </p>
+                        </div>
+                  <div class="col-sm-4 col-12 d-flex flex-column justify-content-center"></div>
+                    </div>
+                </div>
+<div class="container">
+                <div class="pt-5">
+
+                    <div class="d-flex flex-md-row flex-column pb-5">
+                        <div class="col-md-4 col-12 img-adjust">
+                            <div class="options-area-description">
+                                <div class="d-flex flex-column">
+                                    <span>Biura Obsługi Klienta</span><br />
+                                    <a href="<?=Yii::app()->controller->createUrl('site/shops')?>"><div class="btn btn-outline-light" data-target="<?=Yii::app()->controller->createUrl('site/shops')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
+                                </div>
+                            </div>
+                            <div class="options-area-bg-first"></div>
+                        </div>
+                        <div class="col-md-4 col-12 img-adjust">
+                            <div class="options-area-description">
+                                <div class="d-flex flex-column">
+                                    <span>Sklepy Partnerskie</span><br />
+                                    <a href="<?=Yii::app()->controller->createUrl('site/shops',['sklepy'=>1])?>"><div class="btn btn-outline-light" data-target="<?=Yii::app()->controller->createUrl('site/shopsdetal')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
+                                </div>
+                            </div>
+                            <div class="options-area-bg-second"></div>
+                        </div>
+                        <div class="col-md-4 col-12 img-adjust">
+                            <div class="options-area-description">
+                                <div class="d-flex flex-column">
+                                    <span>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Kariera</span><br />
+                                    <a href="<?=Yii::app()->controller->createUrl('site/career')?>"><div class="btn btn-outline-light ml-5" data-target="<?=Yii::app()->controller->createUrl('site/career')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
+                                </div>
+                            </div>
+
+                            <div class="options-area-bg-third"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-us-bottom-section-company">
+                    <div class="row">
+
+                        
+                        <?php if(isset($elements['company-data'])): ?>
+                        
+                            <?php $colSize = ceil(12/count($elements['company-data'])); ?>
+                            
+                            <?php foreach($elements['company-data'] as $c_el): ?>
+                                <div class="col-sm-<?=$colSize?> col-12">
+                                    <p class="text-uppercase font-weight-bold"><?=$c_el['title']?></p>
+                                    <?=$c_el['content']?>
+                                </div>
+                            <?php endforeach; ?>
+                        
+                        
+                        
+                        <?php endif; ?>
+                       
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+				
+
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script defer>
+    
+function initMap() {
+				
+    $('#bigmap').gmap3({
+            map: {
+                    options: {
+                            center: [51.9887323, 19.5569930],
+                            zoom: 6.5,
+                            mapTypeId: 'custom_style',
+                            mapTypeControl: false,
+                            fullscreenControl: false,
+                            panControl: false,
+                            zoomControl: false,
+                            streetViewControl: false,
+                    }
+            },
+            marker: {
+                    values:[{
+                            latLng: [52.2331089, 21.0376814],
+                            data: 'Biuro Zarządu'
+                    }, {
+                            latLng: [53.043051, 18.6634982],
+                            data: 'Centrum Operacyjne'
+                    }, {
+                            latLng: [54.1835371, 16.1534013],
+                            data: 'Detal Partner'
+                    }, {
+                            latLng: [52.753992, 15.2626849],
+                            data: 'MAC'
+                    }, {
+                            latLng: [51.9325402, 15.5015803],
+                            data: 'System'
+                    }],
+     options: {icon: new google.maps.MarkerImage('/gfx/mark2.png', new google.maps.Size(30, 40, "px", "px"))
+            },
+                    events:{
+                            click: function(marker, event, context) {
+                                    var map = $(this).gmap3('get'),
+                                    infowindow = $(this).gmap3({get:{name:'infowindow'}});
+                                    if (infowindow) {
+                                            infowindow.open(map, marker);
+                                            infowindow.setContent(context.data);
+                                    } else {
+                                            $(this).gmap3({
+                                                    infowindow: {
+                                                            anchor: marker,
+                                                            options: {content: context.data}
+                                                    }
+                                            });
+                                    }
+                            }
+                    }
+            },
+
+            styledmaptype: {
+                    id: 'custom_style',
+                    options: {
+                            name: 'Mapa2'
+                    },
+                    styles: [{
+                    "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.icon",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          {
+            "color": "#f5f5f5"
+          }
+        ]
+      },
+        {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          },
+          {
+            "saturation": 100
+          },
+          {
+            "lightness": 100
+          }
+        ]
+      },
+      {
+                            "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+          {
+            "color": "#a6a6a6"
+          },
+          {
+            "visibility": "on"
+          },
+          {
+            "weight": 1.5
+          }
+        ]
+      },
+      {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "lightness": 25
+          },
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#ffffff"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#757575"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#dadada"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.line",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "transit.station",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#eeeeee"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+          {
+            "color": "#c9c9c9"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "color": "#e8e8e8"
+          },
+          {
+            "visibility": "on"
+          }
+        ]
+      },
+      {
+        "featureType": "water",
+        "elementType": "labels.text.fill",
+        "stylers": [
+          {
+            "color": "#9e9e9e"
+                            }
+                            ]
+                    }
+                    ]
+            }
+    });
+}
+</script>

@@ -52,16 +52,7 @@
                 }
         }
         
-        .age-in .a-in, .age-in .a-out{
-            color:#000 !important;
-        }      
-        
-        .age-in .a-in{
-            background: #b00715;
-            border: 2px solid #d7d7d7;
-        }    
-        
-        
+             
 	</style>
     </head>
     <body>

@@ -1,6 +1,6 @@
 <style>
     #cookie_settings {    
-        background-color: #b00715;
+        background-color: #003b7e;
     }
 </style>
 

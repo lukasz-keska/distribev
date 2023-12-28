@@ -35,8 +35,8 @@
                     <div class="age-in">
                     	
                         <h1>Serdecznie witamy w serwisie internetowym
-                            Alcotrad.</h1>
-                        <p>Jednocześnie uprzejmie informujemy, że dane zawarte w serwisie Alcotrad są przeznaczone jedynie do celów handlowych i informacyjnych pomiędzy podmiotami zajmującymi się produkcją, obrotem i handlem napojami alkoholowymi i przeznaczone są <b>wyłącznie dla osób pełnoletnich.</b></p>
+                            United Beverages.</h1>
+                        <p>Jednocześnie uprzejmie informujemy, że dane zawarte w serwisie United Beverages są przeznaczone jedynie do celów handlowych i informacyjnych pomiędzy podmiotami zajmującymi się produkcją, obrotem i handlem napojami alkoholowymi i przeznaczone są <b>wyłącznie dla osób pełnoletnich.</b></p>
                         <a href="google.pl" class="a-out">Wyjście z serwisu</a>
                         <a href="<?php echo url('/site/main'); ?>" class="a-in">Wejście do serwisu internetowego</a>
                     </div>

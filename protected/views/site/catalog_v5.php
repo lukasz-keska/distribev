@@ -21,7 +21,7 @@ cs()->registerCssFile('//fonts.googleapis.com/css?family=Carrois+Gothic+SC');
     }
     
     .pn-catalog-container{
-        background-color: #b00715;
+        background-color: #003b7e;
         color: #FFF;
     }
     

@@ -23,10 +23,13 @@
     <?php endif; ?>
     
     <script defer src="/js/cookieconsent/src/cookieconsent.js"></script>
-    <script defer src="/js/cookieconsent/at/app.js"></script>
-    
+<script defer src="/js/cookieconsent/ub/app.js"></script>
+<link rel="icon" type="image/png" href="https://www.unitedbeverages.pl/images/favicon.png" />
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,400italic,700italic,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+     
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,9 +39,9 @@
     <![endif]-->
 
     <meta name="keywords" content="<?php echo get_setting('seo', 'mainKeywords'); ?>"/>
-    <meta name="description" content="<?php echo 'Alcotrade'//get_setting('seo', 'mainDescription'); ?>"/>
+    <meta name="description" content="<?php echo get_setting('seo', 'mainDescription'); ?>"/>
 
-    <title><?php echo $this->pageTitle; ?> - Alcotrade<?php /*echo get_setting('seo', 'mainTitle');*/ ?></title>
+    <title><?php echo $this->pageTitle; ?> - <?php echo get_setting('seo', 'mainTitle'); ?></title>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -63,6 +66,7 @@
     
 </head>
 <body>
+    
 <?php include('header.php'); ?>
     
 <?php if(Yii::app()->controller->id=='site' && (Yii::app()->controller->action->id=='about' || Yii::app()->controller->action->id=='b2b' || Yii::app()->controller->action->id=='contact')): ?>
@@ -75,8 +79,53 @@
     </div>
 <?php endif; ?>
     
-<?php include('footer.php'); ?>
+<footer>
+    <div id="bottom-area" class="footer-section">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center flex-md-row flex-column">
+                <div class="col-md-4 col-12">
+                    <p class="text-left">
+                        <span class="font-weight-bold bottom-area-company">UNITED BEVERAGES S.A.</span>
+                        <span class="d-flex mt-2 mb-2">ul. Przelot 66<br />
+                                            87-100 Toruń<br /><br /></span>
+
+                        <span class="d-flex mt-4 mb-4">tel:&nbsp;695 875 919</span>
+                        <span class="d-flex mt-4 mb-4">email: <a href="mailto:office@unitedbeverages.pl" style="margin-left:5px;">office@unitedbeverages.pl</a><br /></span>
+                        <span class="d-flex mt-4 mb-4">NIP: 879 22 20 128</span>
+                        <span class="d-flex mt-4 mb-4">REGON: 871249854</span>
+                        <span class="d-flex mt-4 mb-4">KRS: 0000012645</span>
+                        
+                    </p>
+                </div>
+                <div class="col-md-4 col-12 text-center">
+                    <div class="img-map-image">
+                        <p class="img-map-text">Wybierz jeden <br />z naszych oddziałów</p>
+                        <a href="<?=Yii::app()->controller->createUrl('/site/shops')?>" class="text-dark">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/upload/project/mapa.png" class="img-fluid mt-4 mb-4 "/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="text-center d-flex flex-column align-items-start mt-4 mb-4">
+                        <a href="<?=Yii::app()->controller->createUrl('/site/about')?>" class="text-dark">O firmie</a>
+                        <a href="<?=Yii::app()->controller->createUrl('/site/career')?>" class="text-dark">Kariera</a>
+                        <a href="<?=Yii::app()->controller->createUrl('/site/contact')?>" class="text-dark">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer-links">
+        <div class="d-flex flex-row">
+      
+            <a href="/gfx/footer/polityka_prywatnosci.pdf" class="m-2">Polityka Prywatnosci</a>
+            <a href="#" class="m-2">Mapa Strony</a>
+        </div>
+    </div>
+</footer>
     
+       
 <?php if(Yii::app()->controller->id=='site' && (Yii::app()->controller->action->id=='about' || Yii::app()->controller->action->id=='contact')): ?>        
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOjUkIMMIGdfr-GQUTcTjGuPqbh0y3cR4&callback=initMap" type="text/javascript"></script>
 <?php endif; ?>
@@ -169,14 +218,6 @@
          }); 
         </script>
     <?php endif;?>
-    
-    
-    
-    
-    
-
-    
-    
     
     
 </body>

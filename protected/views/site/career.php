@@ -91,11 +91,11 @@ $this->pageTitle = 'Kariera';
 }
 
 .contents-blue {
-    background: #b00715; /* Old browsers */
-    background: -moz-linear-gradient(left, #b00715 0%, #ec6d7a 49%, #ec6d7a 51%, #b00715 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #b00715 0%,#ec6d7a 49%,#ec6d7a 51%,#b00715 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #b00715 0%,#ec6d7a 49%,#ec6d7a 51%,#b00715 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b00715', endColorstr='#b00715',GradientType=1 ); /* IE6-9 */
+    background: #003b7e; /* Old browsers */
+    background: -moz-linear-gradient(left, #003b7e 0%, #ec6d7a 49%, #ec6d7a 51%, #003b7e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #003b7e 0%,#ec6d7a 49%,#ec6d7a 51%,#003b7e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #003b7e 0%,#ec6d7a 49%,#ec6d7a 51%,#003b7e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003b7e', endColorstr='#003b7e',GradientType=1 ); /* IE6-9 */
 }
 
 .blue-sections {
@@ -119,7 +119,7 @@ $this->pageTitle = 'Kariera';
 }
 
 .icon-background-blue {
-  color: #b00715;
+  color: #003b7e;
 }
 
 .fa-stacks {
@@ -141,7 +141,7 @@ $this->pageTitle = 'Kariera';
   width:100px;
   height:100px;
   border-radius: 50%;
-  background-color: #b00715;
+  background-color: #003b7e;
 }
 
 .num-inner {
@@ -153,7 +153,7 @@ $this->pageTitle = 'Kariera';
   width:44px;
   height:44px;
   border-radius: 50%;
-  background-color: #b00715;
+  background-color: #003b7e;
 }
 
 .small-num-inner {
@@ -259,7 +259,7 @@ padding-left: 30%;
 
 
 .btn-appl {
-  background-color: #b00715;
+  background-color: #003b7e;
 text-transform: uppercase;
 width: 350px;
 font-size: 20px;
@@ -579,7 +579,7 @@ ol li {
 ol li:before {
    margin-right: 10px;
    content: counter(item);
-   background: #b00715;
+   background: #003b7e;
    border-radius: 100%;
    color: white;
    width: 1.5em;

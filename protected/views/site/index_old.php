@@ -332,7 +332,7 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
     
     .arrow-left {
         display: inline-block;
-        background-color: #b00715;
+        background-color: #003b7e;
         width: 50%;
         display: table-cell;
         padding: 15px;
@@ -362,7 +362,7 @@ cs()->registerScriptFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery
     
     .std-content h2.link a{
         color: #000 !important;
-        border-bottom:1px solid #b00715;
+        border-bottom:1px solid #003b7e;
     }
     
     .std-content h2.link a:hover{

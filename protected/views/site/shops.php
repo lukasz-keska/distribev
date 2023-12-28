@@ -56,7 +56,7 @@ $showOnlyShops = isset($_GET['sklepy']);
     
     .shop .s-title>*{
         display:inline-block;
-        color:#b00715;
+        color:#003b7e;
     }
     
     .list-shop .shop .s-title>span{

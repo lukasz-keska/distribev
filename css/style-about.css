@@ -287,6 +287,7 @@
 #navHamburger{
     border: 1px solid #333;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

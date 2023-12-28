@@ -112,7 +112,7 @@ include_once 'timeline.php';
     }
     
     .options-area-description .btn:hover{
-        color: #b00715 !important;
+        color: #003b7e !important;
     }
     
     .is-centered {

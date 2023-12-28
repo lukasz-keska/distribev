@@ -94,7 +94,7 @@ $this->pageTitle = $model->title;
 }
 
 .asset{
-    background-color: #b00715;
+    background-color: #003b7e;
     color: #FFF;
     border-radius: 65px;
     width: 100px;
