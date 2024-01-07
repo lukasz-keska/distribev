@@ -4,9 +4,6 @@
  */
 $this->pageTitle = $model->title;
 
-include_once 'timeline.php';
-
-
 ?>
 
 
@@ -81,16 +78,14 @@ include_once 'timeline.php';
     }
 
     .options-area-description {
-        top:25%;
         position: absolute;
+    top: 25%;
+        left: 0;
+        padding-left: 70px;
         color: #ffffff;
         font-size: 24px;
         font-weight: 600;
         z-index: 10;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 60%;
     }
     
     .btn.btn-outline-light{
@@ -105,215 +100,6 @@ include_once 'timeline.php';
         width:100%;
     }
     
-    .options-area-description .btn{
-        color: #212529;
-        background-color: #f8f9fa !important;
-        border-color: #f8f9fa !important;
-    }
-    
-    .options-area-description .btn:hover{
-        color: #003b7e !important;
-    }
-    
-    .is-centered {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .timeline{
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: -50px;
-        margin-right: -50px;
-    }
-    
-    .timeline-stripe{
-        width:5px;
-        height:30px;
-        background-color:#9d9d9d;
-    }
-    
-    .timeline-stripe-short{
-        width:5px;
-        height:15px;
-        background-color:#9d9d9d;
-    }
-    
-    
-    .timeline-circle{
-        border-radius:25px;
-        background-color:#FFF;
-        border:3px solid;
-        width:40px;
-        height:40px;
-    }
-    
-    .timeline-circle-small{
-        border-radius:20px;
-        background-color:#FFF;
-        border:2px solid;
-        width:15px;
-        height:15px;
-        border-color: #9d9d9d;
-    }
-    
-    .break {
-        flex-basis: 100%;
-        height: 0;
-    }
-
-    .c-teal{
-        border-color: #26a4af;
-    }
-    
-    .c-blue{
-        border-color: #0976bb;
-    }
-    
-    .c-navy{
-        border-color: #043a8a;
-    }
-    
-    .c-red{
-        border-color: #da2025;
-    }
-    
-    .c-orange{
-        border-color: #ed602d;
-    }
-    
-    .c-yellow{
-        border-color: #efa32c;
-    }
-    
-    .c-pink{
-        border-color: #fe00dc;
-    }
-    
-    .c-violet{
-        border-color: #7c0ac3;
-    }
-    
-    .c-lgreen{
-        border-color: #00feaa;
-    }
-    
-    .c-green{
-        border-color: #06c835;
-    }
-    
-    .c-dgreen{
-        border-color: #156015;
-    }
-    
-    .low_res .timeline-element{
-        margin-top:10px;
-        width:100%;
-    }
-    
-    .low_res .timeline-element .content{
-        padding-left: 9px;
-        padding-right: 9px;
-    }
-    
-    .t-left .timeline-element:first-of-type{
-        margin-top:38px;
-    }
-    
-    .t-right .timeline-element:first-of-type{
-        margin-top:120px;
-    }
-    
-    .timeline-element h2 {
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    
-    .timeline-element h2.title-background {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .timeline-element h2.title-background:before {
-        border-top: 3px solid #8d8d8d;
-        content:"";
-        margin: 0 auto; /* this centers the line to the full width specified */
-        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-        top: 50%; left: 0; right: 0; bottom: 0;
-        width: 95%;
-        z-index: -1;
-    }
-
-     .timeline-element h2.title-background span { 
-        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
-        background: #fff; 
-        padding: 0 15px; 
-    }
-    
-    .timeline-element .content{
-        font-size: 11px;
-        padding-left: 12px;
-    }
-    
-    .te-1993{
-        margin-top: 90px;
-    }
-    
-    .te-1995{
-        margin-top: 121px;
-    }
-    
-    .te-2000{
-        margin-top: 87px;
-    }
-    
-    .te-2007{
-        margin-top: 45px;
-    }
-    
-    .te-2019{
-        margin-top: 75px;
-    }
-    
-    .te-1994{
-        margin-top: 105px;
-    }
-
-    .te-1998{
-        margin-top: 124px;
-    }
-
-    .te-2006{
-        margin-top: 41px;
-    }
-
-    .te-2014{
-        margin-top: 123px;
-    }
-    
-    @media (max-width:700px){
-        .hi_res{
-            display:none;
-        }
-        
-        .low_res{
-            display:flex;
-        }
-    }
-    
-    @media (min-width:701px){
-        .hi_res{
-            display:flex;
-        }
-        
-        .low_res{
-            display:none;
-        }
-    }
 </style>
 
 
@@ -333,7 +119,7 @@ include_once 'timeline.php';
 
             <div class="about-us">
                 <p class="pt-3 about-us-main-description"><?=$model->header?></p>
-                
+
                 <div class="row pt-5">
                     <div class="col-sm-6 col-12 mb-0">
                         <p class="about-us-custom-description"><?=$model->content?></p>
@@ -349,132 +135,131 @@ include_once 'timeline.php';
     </div>
 </div>
 
+<div class="content-blue mb-3 sale-team">
+            <div class="container about-us-blue-section">
+                <h2 class="about-us-blue-section-title pt-5">Doświadczony Zespół</h2>
 
-<div class="container">
-    <div class="row low_res">
-        <?php   
-            foreach($timeline as $year => $desc){
-            ?>  
-            
-            <div class="timeline-element">
-                <h2 class="title-background"><span><?=$year?></span></h2>
-                <div class="content">
-                    <?=$desc?>
+                <div class="row pt-5 pb-5">
+                    <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Ponad<br />750 pracowników</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">12 oddziałów<br />W Polsce</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Ponad<br />125 handlowców</p>
+                        </div>
+                    </div>
+                  <div class="col-sm-3 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">120 specjalistycznych<br /> sklepów alkoholowych</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        <div class="break"></div>
-        <?php  
-            }
-        ?>
-    </div>
-    <div class="row hi_res">
-        <div class="col-md-5 t-left">
+                <div class="row pt-5 pb-5">
+                    <div class="col-sm-6 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Obsługa największych<br />sieci międzynarodowych</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12 text-center">
+                        <div class="d-flex flex-column">
+                            <i class="fas fa-gem" style="font-size: 26px;"></i>
+                            <p class="text-uppercase pt-3">Sprzedaż hurtowa<br />i dla gastronomii</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <p class="about-us-custom-description">Obsługa Klienta jest dla nas szczególnie ważna. Naszą ambicją jest posiadanie wykwalifikowanych handlowców, którzy dzięki
+                    swojej wiedzy i umiejętnościom będą odpowiednimi partnerami dla naszych Odbiorców. Nowoczesne urządzenia mobilne, w
+                    które są wyposażeni, pozwalają na ciągły dostęp do informacji o stanach magazynowych i aktualnych promocjach. Dzięki nim
+                    mogą bezzwłocznie przesyłać zamówienia do centrów logistycznych aby zminimalizować czas oczekiwania i usprawnić proces
+                    dostawy naszych produktów.</p>
+                </div>
             
-            <?php             
-                $i = 0;
-                foreach($timeline as $year => $desc){
-                ?>  
-                <?php
-                
-                    if(!($i%2)){
+</div>
+<div class="content-light">
+    <div class="container about-us-crew-section">
+                <h2 class="about-us-crew-section-title">Zarząd firmy</h2>
+                <p class="about-us-custom-description text-center"><?=$elements['zarzad-opis'][0]['content']?></p>
 
-                        ?>
-                            <div class="timeline-element te-<?=$year?>">
-                                <h2 class="title-background"><span><?=$year?></span></h2>
-                                <div class="content">
-                                    <?=$desc?>
-                                </div>
-                            </div>
-                        <?php    
-                    }
-                
-                $i++;
-                }
-            ?>
-          
-            
-        </div>
-        <div class="col-md-2 is-centered timeline">
-            <div class="timeline-stripe"></div><div class="break"></div>
-            <div class="timeline-circle c-teal"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-blue"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-navy"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-red"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-orange"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-yellow"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-pink"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-violet"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-lgreen"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-green"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle c-dgreen"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-            <div class="timeline-circle-small"></div><div class="break"></div>
-            <div class="timeline-stripe-short"></div><div class="break"></div>
-        </div>
-        <div class="col-md-5 t-right">
-            <?php             
-                $i = 0;
-                foreach($timeline as $year => $desc){
-                ?>  
-                <?php                
-                    if($i%2){
+                <div class="row text-center pt-5 pb-5">
 
-                        ?>
-                            <div class="timeline-element te-<?=$year?>">
-                                <h2 class="title-background"><span><?=$year?></span></h2>
-                                <div class="content">
-                                    <?=$desc?>
-                                </div>
-                            </div>
-                        <?php    
-                    }
-                
-                $i++;
-                }
-            ?>
-        </div>
+                    
+                    <?php $col = ceil(12/count($elements['zarzad'])); ?>
+                    
+                    <?php foreach($elements['zarzad'] as $el): ?>
+                        
+                        <div class="col-sm-<?=$col?> col-12 text-center managment-el">
+                            <p class="about-us-crew-section-image-title"><?=$el['title']?></p>
+                            <p class="about-us-crew-section-image-description"><?=$el['content']?></p>
+                        </div>
+                    
+                    <?php endforeach; ?>
+                    
+                </div>
+
+
     </div>
-    
-    
-    
-    
+</div>
+            <div class="about-us-bottom-section">
+                <div class="row">
+                    <div class="col-sm-8 col-12">
+                        <div id="bigmap" class="map-fluid"></div>
+                    </div>
+                    
+                    
+                    <div class="col-sm-4 col-12 d-flex flex-column justify-content-center">
+                        <div class="d-inline-flex">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/gfx/about/navigation.png" class="img-fluid" style="width: 30px; height: 35px;"/>
+
+                            <p class="pl-2">
+                                <span class="text-uppercase font-weight-bold">Siedziba Główna</span><br />
+                                <span>United Beverages S.A.<br />
+                                ul. Przelot 66<br />
+                                87-100 Toruń</span><br />
+                            </p>
+                        </div>
+
+                        <hr />              
+                        <div class="d-inline-flex">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/gfx/about/navigation.png" class="img-fluid" style="width: 30px; height: 35px;"/>
+                            <p class="pl-2">
+                                <span class="text-uppercase font-weight-bold">Biuro zarządu</span><br />
+                                <span>United Beverages S.A.<br />
+                                                    Ul. Dziekońskiego 3,<br />
+                                                    00-728 Warszawa</span><br />
+                            </p>
+                        </div>
+                        <hr />  
+                        <div class="d-inline-flex">
+                            <img src="<?=Yii::app()->request->baseUrl; ?>/gfx/about/navigation.png" class="img-fluid" style="width: 30px; height: 35px;"/>
+                            <p class="pl-2">
+                                <span class="text-uppercase font-weight-bold">Spółki sprzedaży detalicznej</span><br />
+                                 <span>AlkoSfera Sp. z o.o.<br />
+                            </p>
+                        </div>
+                  <div class="col-sm-4 col-12 d-flex flex-column justify-content-center"></div>
+                    </div>
+                </div>
+<div class="container">
                 <div class="pt-5">
 
                     <div class="d-flex flex-md-row flex-column pb-5">
                         <div class="col-md-4 col-12 img-adjust">
                             <div class="options-area-description">
-                                <div class="d-flex flex-column text-center">
-                                    <span>Oddziały Alco-Trade</span><br />
+                                <div class="d-flex flex-column">
+                                    <span>Biura Obsługi Klienta</span><br />
                                     <a href="<?=Yii::app()->controller->createUrl('site/shops')?>"><div class="btn btn-outline-light" data-target="<?=Yii::app()->controller->createUrl('site/shops')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
                                 </div>
                             </div>
@@ -482,18 +267,18 @@ include_once 'timeline.php';
                         </div>
                         <div class="col-md-4 col-12 img-adjust">
                             <div class="options-area-description">
-                                <div class="d-flex flex-column text-center">
-                                    <span>Nasza Oferta</span><br />
-                                    <a href="<?=Yii::app()->controller->createUrl('site/promotions',['sklepy'=>1])?>"><div class="btn btn-outline-light" data-target="<?=Yii::app()->controller->createUrl('site/promotions')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
+                                <div class="d-flex flex-column">
+                                    <span>Sklepy Partnerskie</span><br />
+                                    <a href="<?=Yii::app()->controller->createUrl('site/shops',['sklepy'=>1])?>"><div class="btn btn-outline-light" data-target="<?=Yii::app()->controller->createUrl('site/shopsdetal')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
                                 </div>
                             </div>
                             <div class="options-area-bg-second"></div>
                         </div>
                         <div class="col-md-4 col-12 img-adjust">
                             <div class="options-area-description">
-                                <div class="d-flex flex-column text-center">
-                                    <span>Kariera</span><br />
-                                    <a href="<?=Yii::app()->controller->createUrl('site/career')?>"><div class="btn btn-outline-light" data-target="<?=Yii::app()->controller->createUrl('site/career')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
+                                <div class="d-flex flex-column">
+                                    <span>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Kariera</span><br />
+                                    <a href="<?=Yii::app()->controller->createUrl('site/career')?>"><div class="btn btn-outline-light ml-5" data-target="<?=Yii::app()->controller->createUrl('site/career')?>">Sprawdź <i class="fas fa-arrow-right"></i> </div></a>
                                 </div>
                             </div>
 
@@ -501,7 +286,31 @@ include_once 'timeline.php';
                         </div>
                     </div>
                 </div>
-  
+
+                <div class="about-us-bottom-section-company">
+                    <div class="row">
+
+                        
+                        <?php if(isset($elements['company-data'])): ?>
+                        
+                            <?php $colSize = ceil(12/count($elements['company-data'])); ?>
+                            
+                            <?php foreach($elements['company-data'] as $c_el): ?>
+                                <div class="col-sm-<?=$colSize?> col-12">
+                                    <p class="text-uppercase font-weight-bold"><?=$c_el['title']?></p>
+                                    <?=$c_el['content']?>
+                                </div>
+                            <?php endforeach; ?>
+                        
+                        
+                        
+                        <?php endif; ?>
+                       
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 				
 

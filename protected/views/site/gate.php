@@ -1,6 +1,6 @@
 <?php 
 
-$this->pageTitle = 'Alco-Trade'; 
+$this->pageTitle = 'DistribEv'; 
 
 ?>
 <div class="loading-background">

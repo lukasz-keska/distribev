@@ -22,5 +22,5 @@ $timeline = [
                     W kolejnych latach następuje standaryzacja procesów biznesowych w Grupie Sobieski.',
     2014 => 'Sobieski Trade przeprowadza konsolidację nabytych wcześniej hurtowni alkoholowych i prowadzi swoją działalność w 19 oddziałach
                     w kraju, zatrudniając ponad 400 pracowników, co pozwala na zapewnienie sprawnej dystrybucji na ok. 2/3 terytorium Polski.',
-    2019 => 'Akwizycja spółki Sobieski Trade przez United Beverages S.A. Spółka rozpoczyna swą nową historię pod nazwą Alco-Trade.',
+    2019 => 'Akwizycja spółki Sobieski Trade przez United Beverages S.A. Spółka rozpoczyna swą nową historię pod nazwą DistribEv.',
 ];

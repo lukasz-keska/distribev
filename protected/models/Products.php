@@ -8,6 +8,7 @@ class Products extends CActiveRecord
 	public $product_ids = array();
         public $specifications = [];
         public $infolog_at;
+        public $infolog_de;
         
 	public static function model($className=__CLASS__)
 	{
@@ -140,14 +141,10 @@ class Products extends CActiveRecord
             ),
                     
             'fileupload_ub' => array(
-                // set class name
                 'class' => 'UploadBehavior',
-                // name of the attribute that receives file upload
-                'field' => 'infolog_at',
-                // name of the path to save uploaded file
-                'path' => '/home/buzzapipga/united2019/upload/infolog_at',
-                'pathUrl' => 'upload/infolog_at'
-                // Note: trailing slash(/) is not required. here we save our file into images
+                'field' => 'infolog_de',
+                'path' => '/home/buzzapipga/united2019/upload/infolog_de',
+                'pathUrl' => 'upload/infolog_de'
             ),
 		);
 	}

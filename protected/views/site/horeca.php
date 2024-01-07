@@ -39,6 +39,21 @@ $this->pageTitle = $model->title;
     color: #000;
 }
 
+.options-area-description {
+position: absolute;
+left: 0;
+right: 0;
+top: 25%;
+margin-left: auto;
+margin-right: auto;
+width: 240px;
+text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: 10;
+}
+
 .img-adjust {
     padding: 1px;
    }
@@ -103,7 +118,7 @@ $this->pageTitle = $model->title;
 }
 
 .asset{
-    background-color: #003b7e;
+    background-color: #02548c;
     color: #FFF;
     border-radius: 65px;
     width: 100px;
@@ -184,7 +199,7 @@ $this->pageTitle = $model->title;
             <ul class="d-flex breadcrumbs">
                 <li><a href="<?=Yii::app()->controller->createUrl('site/index')?>">Strona główna</a></li>
                 <li>></li>
-                <li><a href="<?=Yii::app()->controller->createUrl('site/promotions')?>">Oferta</a></li>
+                <li><a href="<?=Yii::app()->controller->createUrl('site/promotions')?>">Promocje</a></li>
                 <li>></li>
                 <li><?=$this->pageTitle?></li>
             </ul>
@@ -273,7 +288,7 @@ $this->pageTitle = $model->title;
                         <div class="options-area-description">
                             <div class="d-flex flex-column">
                                 <span>Aktualna Gazetka</span><br />
-                                <a class="btn btn-outline-light" href="<?=Yii::app()->controller->createUrl('/site/catalog/slug/'.$model->slug)?>">Otwórz<i class="fas fa-arrow-right"></i></a>
+                                <a class="btn btn-outline-light" href="<?=Yii::app()->controller->createUrl('/site/catalog/slug/'.$model->slug)?>">Pobierz <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="options-area-bg-first"></div>
@@ -281,8 +296,8 @@ $this->pageTitle = $model->title;
                     <div class="col-md-6 col-12 img-adjust">
                         <div class="options-area-description">
                             <div class="d-flex flex-column">
-                                <span>Oddziały Alco-Trade</span><br />
-                                <a  href="<?=Yii::app()->controller->createUrl('site/shops')?>" class="btn btn-outline-light">Sprawdź<i class="fas fa-arrow-right"></i></a>
+                                <span>Biura Obsługi Klienta</span><br />
+                                <a  href="<?=Yii::app()->controller->createUrl('site/shops')?>" class="btn btn-outline-light">Sprawdź <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                         <div class="options-area-bg-second"></div>

@@ -166,9 +166,6 @@ class SiteController extends Controller {
                 'category' => $subCategory
             ));
         } else {
-
-            //User::pre('OK',true);
-
             Yii::app()->user->setFlash('error', 'Nie znaleziono produktu');
             Yii::app()->request->redirect('/site/brands');
         }
@@ -321,6 +318,7 @@ class SiteController extends Controller {
             $elements[$el->slug][] = $el->getAttributes();
         }
 
+        //User::pre($elements,true);
         $this->render('about', ['model' => $model, 'elements' => $elements]);
     }
 
@@ -370,7 +368,7 @@ class SiteController extends Controller {
         $promotions = [
             'shopsdetal' => self::_getSite('shopsdetal'),
             'horeca' => self::_getSite('horeca'),
-                //'b2b' => self::_getSite('b2b'),
+            'b2b' => self::_getSite('b2b'),
         ];
 
         if ($slug) {
@@ -387,21 +385,6 @@ class SiteController extends Controller {
 
             switch ($slug) {
                 case 'b2b':
-                    /* $products = [];
-                      $giftIds = Yii::app()->db->createCommand('SELECT product_id FROM `ub_product_related` WHERE category_id=89')->queryAll();
-                      if(!empty($giftIds)){
-
-                      $ids = [];
-                      foreach($giftIds as $id){
-                      $ids[] = $id['product_id'];
-                      }
-
-                      $cr = new CDbCriteria();
-                      $cr->addInCondition('product_id', $ids);
-                      $products = Products::model()->findAll($cr);
-                      }
-
-                      $renderParams['products'] = $products; */
 
                     foreach ($siteElements as $el) {
                         if ($el->slug == 'banner' || $el->slug == 'product') {
@@ -457,18 +440,6 @@ class SiteController extends Controller {
 
         $this->render('offer', array('model' => $model, 'elements' => $elements));
 
-        /* $model = new OfferProduct('search');
-          $model->unsetAttributes();
-          if(isset($_GET['OfferProduct']))
-          $model->setAttributes($_GET['OfferProduct']);
-
-          $total = OfferProduct::model()->count();
-
-          $method = Yii::app()->request->isAjaxRequest ? 'renderPartial' : 'render';
-          $this->$method('offer', array(
-          'model' => $model,
-          'total' => $total
-          )); */
     }
 
     /**

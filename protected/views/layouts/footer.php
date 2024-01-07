@@ -11,11 +11,11 @@
         <div class="container">
             <div class="d-flex justify-content-center flex-md-row flex-column">
                 <div class="col-md-4 col-12">
-                        <span class="font-weight-bold bottom-area-company">Alco-Trade sp. z o.o.</span>
+                        <span class="font-weight-bold bottom-area-company">Distribev sp. z o.o.</span>
                         <span class="d-flex mt-2">Kołaczkowo 9<br />
                                             62-230 Witkowo Wielkopolska</span>
                         <span class="d-flex">tel:&nbsp;61 47 78 212</span>
-                        <span class="d-flex">email: <a href="mailto:alcotrade@alcotrade.pl" style="margin-left:5px;">alcotrade@alcotrade.pl</a><br /></span>
+                        <span class="d-flex">email: <a href="mailto:distribev@distribev.pl" style="margin-left:5px;">distribev@distribev.pl</a><br /></span>
                         <span class="d-flex mb-4">NIP: 667 00 04 078</span>
                 </div>
                 
@@ -24,7 +24,7 @@
                         <a href="<?=Yii::app()->controller->createUrl('/site/about')?>" class="text-dark">O firmie</a>
                         <a href="<?=Yii::app()->controller->createUrl('/site/promotions/slug/shopsdetal')?>" class="text-dark">Oferta Detal</a>
                         <a href="<?=Yii::app()->controller->createUrl('/site/promotions/slug/horeca')?>" class="text-dark">Oferta HoReCa</a>
-                        <a href="<?=Yii::app()->controller->createUrl('/site/shops')?>" class="text-dark">Oddziały Alco-Trade</a>
+                        <a href="<?=Yii::app()->controller->createUrl('/site/shops')?>" class="text-dark">Oddziały DistribEv</a>
                         <a href="<?=Yii::app()->controller->createUrl('/site/contact')?>" class="text-dark">Kontakt</a>
                     </div>
                 </div>
